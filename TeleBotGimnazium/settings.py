@@ -12,11 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj-database-url
+import dj_database_url
 
-# set db
-db_from_env = dj-database-url.config()
-DATABASE['default'].update(db_from_env)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -30,7 +28,7 @@ SECRET_KEY = '80=ic!=f6(@$@rf*ls$@t=k=f9^lx$sklghlh5#qe0hhj4#1+4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['gimnasium-site.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -123,3 +121,7 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# set db
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
