@@ -1,1 +1,1 @@
-worker: python manage.py runserver
+web: gunicorn TeleBotGimnazium.wsgi --log-file -

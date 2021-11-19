@@ -1,3 +1,7 @@
 Django == 3.1
-pytz
-requests
+dj-database-url==0.5.0
+gunicorn==20.1.0
+pytz==2020.1
+whitenoise==5.3.0
+requests==2.24.0
+psycopg2==2.8.6
