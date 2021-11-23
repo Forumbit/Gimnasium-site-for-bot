@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import django_heroku
+
 
 
 
@@ -125,3 +127,6 @@ STATICFILES_DIRS = (
 # set db
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
